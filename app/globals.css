@@ -1,0 +1,167 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  :root {
+    --font-serif: var(--font-playfair);
+    --font-sans: var(--font-jakarta);
+  }
+
+  body {
+    background-color: #F8F5F1;
+    color: #111111;
+    font-family: var(--font-sans), sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Background Texture Layer: Subtle Handmade Paper/Linen Grain */
+.bg-ivory-paper {
+  background-color: #F8F5F1;
+  background-image: 
+    radial-gradient(rgba(184, 168, 142, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(156, 74, 63, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* ==============================================================================
+ * MODERN LUXURY TERRACOTTA BUTTON (TONED DOWN WITH SUBTLE WARM ORANGE FADE)
+ * ============================================================================== */
+
+.btn-terracotta-luxury {
+  position: relative;
+  background-color: #9C4A3F;
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(225, 115, 90, 0.35) 0%,
+    rgba(156, 74, 63, 0) 75%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.4),
+    0 8px 22px -4px rgba(156, 74, 63, 0.32);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-terracotta-luxury:hover {
+  background-color: #8D3F35;
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(235, 125, 100, 0.45) 0%,
+    rgba(141, 63, 53, 0) 80%
+  );
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    0 12px 28px -4px rgba(156, 74, 63, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-terracotta-luxury:active {
+  transform: scale(0.96) translateY(0);
+  box-shadow: 
+    inset 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 4px 12px -2px rgba(156, 74, 63, 0.3);
+}
+
+/* ==============================================================================
+ * USER-FAVORITE FROSTED IVORY GLASS BUTTON (APPLIED SITE-WIDE TO PILLS & CARDS)
+ * ============================================================================== */
+
+.btn-liquid-glass-ivory {
+  position: relative;
+  background-color: rgba(243, 238, 231, 0.85);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(226, 217, 205, 0.4) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.9),
+    0 4px 14px -2px rgba(17, 17, 17, 0.05);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-liquid-glass-ivory:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: rgba(184, 168, 142, 0.45);
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 1),
+    0 8px 20px -2px rgba(17, 17, 17, 0.09);
+  transform: translateY(-1px);
+}
+
+.btn-liquid-glass-ivory:active {
+  transform: scale(0.96) translateY(0);
+}
+
+/* ==============================================================================
+ * 3D EMBOSSED CARD HIGHLIGHT
+ * ============================================================================== */
+
+.card-embossed-3d {
+  background-color: #F3EEE7;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(243, 238, 231, 0.9) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px rgba(184, 168, 142, 0.15),
+    0 12px 32px -8px rgba(17, 17, 17, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-embossed-3d:hover {
+  border-color: rgba(156, 74, 63, 0.4);
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 1),
+    0 18px 40px -6px rgba(156, 74, 63, 0.16);
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism Tag Pill (Matching Philosophy Cards) */
+.pill-glass-tag {
+  background-color: rgba(156, 74, 63, 0.08);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(156, 74, 63, 0.3);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.7);
+}
+
+/* Smooth Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F5F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8A88E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9C4A3F;
+}
